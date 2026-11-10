@@ -1,0 +1,5 @@
+# Wokwi Library List (https://docs.wokwi.com/guides/libraries)
+PubSubClient
+LiquidCrystal I2C
+ArduinoJson
+

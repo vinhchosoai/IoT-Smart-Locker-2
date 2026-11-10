@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "author": "IoT Smart Locker Project Team",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -130,
+      "left": 180,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -110,
+      "left": -130,
+      "attrs": { "volume": "0.8" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 40,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay2",
+      "top": 150,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw1",
+      "top": 60,
+      "left": -150,
+      "attrs": { "value": "0" }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "top": 150,
+      "left": -150,
+      "attrs": { "value": "0" }
+    }
+  ],
+  "connections": [
+    [ "esp:D21", "lcd1:SDA", "green", [ "h0" ] ],
+    [ "esp:D22", "lcd1:SCL", "blue", [ "h0" ] ],
+    [ "esp:VIN", "lcd1:VCC", "red", [ "h0" ] ],
+    [ "esp:GND.1", "lcd1:GND", "black", [ "h0" ] ],
+    [ "esp:D15", "bz1:2", "orange", [ "h0" ] ],
+    [ "esp:GND.2", "bz1:1", "black", [ "h0" ] ],
+    [ "esp:D26", "relay1:IN", "yellow", [ "h0" ] ],
+    [ "esp:VIN", "relay1:VCC", "red", [ "h0" ] ],
+    [ "esp:GND.1", "relay1:GND", "black", [ "h0" ] ],
+    [ "esp:D27", "relay2:IN", "purple", [ "h0" ] ],
+    [ "esp:VIN", "relay2:VCC", "red", [ "h0" ] ],
+    [ "esp:GND.1", "relay2:GND", "black", [ "h0" ] ],
+    [ "esp:D32", "sw1:2", "cyan", [ "h0" ] ],
+    [ "esp:GND.2", "sw1:1", "black", [ "h0" ] ],
+    [ "esp:3V3", "sw1:3", "red", [ "h0" ] ],
+    [ "esp:D33", "sw2:2", "magenta", [ "h0" ] ],
+    [ "esp:GND.2", "sw2:1", "black", [ "h0" ] ],
+    [ "esp:3V3", "sw2:3", "red", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
+

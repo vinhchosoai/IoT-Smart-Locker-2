@@ -1,0 +1,36 @@
+{
+  "ai_verification": {
+    "threshold": 0.45,
+    "genuine_distances": [
+      0.1956,
+      0.017,
+      0.0347
+    ],
+    "impostor_distances": [
+      0.7791,
+      0.8039,
+      0.9713,
+      1.0211,
+      0.9152,
+      0.8163
+    ],
+    "true_accept_rate_pct": 100.0,
+    "true_reject_rate_pct": 100.0,
+    "false_accept_rate_pct": 0.0,
+    "false_reject_rate_pct": 0.0,
+    "avg_processing_ms": 12.0,
+    "p95_processing_ms": 18.19
+  },
+  "api_performance": {
+    "avg_store_e2e_ms": 57.13,
+    "avg_retrieve_e2e_ms": 38.11,
+    "avg_overall_api_ms": 39.87
+  },
+  "mqtt_iot": {
+    "broker_mode": "MQTT_LIVE (broker.hivemq.com:1883)",
+    "avg_dispatch_latency_ms": 4.85,
+    "state_sync_accuracy_pct": 100.0,
+    "door_timeout_detection_rate_pct": 100.0
+  },
+  "database_engine": "MySQL 8.0"
+}
